@@ -54,7 +54,29 @@
   </style>
 </head>
 <body>
+<div id="particles-js"></div>
 
+<style>
+#particles-js {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: #0f172a;
+  z-index: -1;
+}
+</style>
+
+<script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+
+<script>
+particlesJS("particles-js", {
+  particles: {
+    number: { value: 80 },
+    size: { value: 3 },
+    move: { speed: 2 },
+    line_linked: { enable: true },
+  }
+});
 <header>
   <h1>DNCC Wonderland</h1>
   <p>Experience Fun, Adventure & Family Entertainment in Dhaka</p>
