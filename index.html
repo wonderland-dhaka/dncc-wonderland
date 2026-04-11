@@ -1,81 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DNCC Wonderland | Dhaka</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DNCC Wonderland | Dhaka</title>
 
-  <style>
-    body {margin:0; font-family:Arial, sans-serif; background:#0f172a; color:#fff;}
-
-    header {
-      background:linear-gradient(to right,#0ea5e9,#22c55e);
-      padding:60px 20px;
-      text-align:center;
-    }
-
-    header h1 {margin:0; font-size:40px;}
-    header p {margin-top:10px; font-size:18px;}
-
-    .btn {
-      display:inline-block;
-      margin-top:20px;
-      padding:12px 25px;
-      background:#fff;
-      color:#000;
-      border-radius:6px;
-      text-decoration:none;
-      font-weight:bold;
-    }
-
-    section {padding:40px 20px; max-width:1000px; margin:auto;}
-
-    .grid {
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-      gap:20px;
-    }
-
-    .card {
-      background:#1e293b;
-      padding:20px;
-      border-radius:10px;
-      transition:0.3s;
-    }
-
-    .card:hover {transform:translateY(-5px);}
-
-    footer {
-      text-align:center;
-      padding:20px;
-      background:#020617;
-      color:#94a3b8;
-    }
-  </style>
-</head>
-<body>
-<div id="particles-js"></div>
 <style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #fff;
+  background: #0f172a;
+}
+
+/* 🔥 Particle Background */
 #particles-js {
   position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  background: #0f172a;
   z-index: -1;
+}
+
+/* Header */
+header {
+  background: linear-gradient(to right, #0ea5e9, #22c55e);
+  padding: 60px 20px;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 40px;
+}
+
+header p {
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+/* Button */
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 25px;
+  background: #fff;
+  color: #000;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Sections */
+section {
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* Grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+/* Cards */
+.card {
+  background: #1e293b;
+  padding: 20px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #020617;
+  color: #94a3b8;
 }
 </style>
 
-<script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+</head>
 
-<script>
-particlesJS("particles-js", {
-  particles: {
-    number: { value: 80 },
-    size: { value: 3 },
-    move: { speed: 2 },
-    line_linked: { enable: true },
-  }
-});
+<body>
+
+<!-- 🔥 Particle Background -->
+<div id="particles-js"></div>
+
 <header>
   <h1>DNCC Wonderland</h1>
   <p>Experience Fun, Adventure & Family Entertainment in Dhaka</p>
@@ -112,6 +130,20 @@ particlesJS("particles-js", {
 <footer>
   <p>DNCC Wonderland</p>
 </footer>
+
+<!-- 🔥 Particle Script -->
+<script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+
+<script>
+particlesJS("particles-js", {
+  particles: {
+    number: { value: 60 },
+    size: { value: 3 },
+    move: { speed: 1.5 },
+    line_linked: { enable: true }
+  }
+});
+</script>
 
 </body>
 </html>
