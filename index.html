@@ -3,56 +3,93 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DNCC Wonderland - Dhaka</title>
+  <title>DNCC Wonderland | Dhaka</title>
+
   <style>
-    body {font-family: Arial, sans-serif; margin:0; background:#0f172a; color:#e2e8f0;}
-    header {text-align:center; padding:50px; background:#1e293b;}
-    header h1 {margin:0; font-size:36px;}
-    header p {margin-top:10px; color:#94a3b8;}
-    section {padding:40px; max-width:1000px; margin:auto;}
-    .card {background:#1e293b; padding:20px; margin-bottom:20px; border-radius:10px;}
-    .btn {display:inline-block; padding:10px 20px; background:#38bdf8; color:black; text-decoration:none; border-radius:5px; margin-top:10px;}
-    footer {text-align:center; padding:20px; background:#020617; color:#64748b;}
+    body {margin:0; font-family:Arial, sans-serif; background:#0f172a; color:#fff;}
+
+    header {
+      background:linear-gradient(to right,#0ea5e9,#22c55e);
+      padding:60px 20px;
+      text-align:center;
+    }
+
+    header h1 {margin:0; font-size:40px;}
+    header p {margin-top:10px; font-size:18px;}
+
+    .btn {
+      display:inline-block;
+      margin-top:20px;
+      padding:12px 25px;
+      background:#fff;
+      color:#000;
+      border-radius:6px;
+      text-decoration:none;
+      font-weight:bold;
+    }
+
+    section {padding:40px 20px; max-width:1000px; margin:auto;}
+
+    .grid {
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:20px;
+    }
+
+    .card {
+      background:#1e293b;
+      padding:20px;
+      border-radius:10px;
+      transition:0.3s;
+    }
+
+    .card:hover {transform:translateY(-5px);}
+
+    footer {
+      text-align:center;
+      padding:20px;
+      background:#020617;
+      color:#94a3b8;
+    }
   </style>
 </head>
 <body>
 
 <header>
   <h1>DNCC Wonderland</h1>
-  <p>Dhaka North City Corporation Entertainment Park</p>
+  <p>Experience Fun, Adventure & Family Entertainment in Dhaka</p>
+  <a href="#" class="btn">Get Tickets</a>
 </header>
 
 <section>
-  <div class="card">
-    <h2>About Us</h2>
-    <p>DNCC Wonderland, formerly known as Shyamoli Shishu Mela, is a popular entertainment park located in Dhaka. It offers fun rides, family attractions, and recreational experiences for all age groups.</p>
-  </div>
+  <h2>About Wonderland</h2>
+  <p>DNCC Wonderland (formerly Shyamoli Shishu Mela) is one of Dhaka’s most popular amusement parks. Enjoy thrilling rides, games, and family-friendly attractions.</p>
+</section>
 
-  <div class="card">
-    <h2>Our Attractions</h2>
-    <ul>
-      <li>Fun Rides & Games</li>
-      <li>Family Entertainment Zone</li>
-      <li>Kids Play Area</li>
-      <li>Food & Refreshments</li>
-    </ul>
-  </div>
-
-  <div class="card">
-    <h2>Location</h2>
-    <p>Located in Dhaka, within DNCC area (previously Shyamoli Shishu Mela).</p>
-    <a href="#" class="btn">View on Map</a>
-  </div>
-
-  <div class="card">
-    <h2>Contact</h2>
-    <p>Phone: +880XXXXXXXXXX</p>
-    <p>Email: info@dnccwonderland.com</p>
+<section>
+  <h2>Our Attractions</h2>
+  <div class="grid">
+    <div class="card">🎢 Rides & Roller Coasters</div>
+    <div class="card">🎡 Ferris Wheel</div>
+    <div class="card">👨‍👩‍👧 Family Zone</div>
+    <div class="card">🍔 Food Court</div>
   </div>
 </section>
 
+<section>
+  <h2>Visit Us</h2>
+  <p>Location: DNCC Wonderland, Dhaka (Shyamoli area)</p>
+  <a href="#" class="btn">Open Map</a>
+</section>
+
+<section>
+  <h2>Contact</h2>
+  <p>📞 Phone: 01XXXXXXXXX</p>
+  <p>📧 Email: info@dnccwonderland.com</p>
+</section>
+
 <footer>
-  <p>DNCC Wonderland, Dhaka</p>
+  <p>DNCC Wonderland</p>
 </footer>
 
 </body>
