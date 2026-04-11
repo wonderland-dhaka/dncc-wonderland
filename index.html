@@ -118,7 +118,7 @@ footer {
 <header>
   <h1>DNCC Wonderland</h1>
   <p>Experience Fun, Adventure & Family Entertainment in Dhaka</p>
-  <a href="#" class="btn">Get Tickets</a>
+  <a href="#" onclick="contactOption()" class="btn">Get Tickets</a>
 </header>
 
 <section>
@@ -165,6 +165,16 @@ particlesJS("particles-js", {
   }
 });
 </script>
+<script>
+function contactOption() {
+  let choice = confirm("Call for tickets?\nPress OK for Call\nCancel for Messenger");
 
+  if (choice) {
+    window.location.href = "tel:+8801XXXXXXXXX";
+  } else {
+    window.open("https://m.me/YOUR_PAGE_USERNAME", "_blank");
+  }
+}
+</script>
 </body>
 </html>
