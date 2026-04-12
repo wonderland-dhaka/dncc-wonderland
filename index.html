@@ -28,21 +28,18 @@ body {
   z-index: -2;
 }
 
-/* 🔥 Blur + Gradient Overlay */
+/* 🔥 Overlay */
 .overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  
-  background: linear-gradient(
-    135deg,
+  background: linear-gradient(135deg,
     rgba(14,165,233,0.3),
     rgba(34,197,94,0.3),
     rgba(255,165,0,0.2)
   );
-
   backdrop-filter: blur(8px);
   z-index: -1;
 }
@@ -74,6 +71,7 @@ header p {
   border-radius: 6px;
   text-decoration: none;
   font-weight: bold;
+  cursor: pointer;
 }
 
 /* Sections */
@@ -110,54 +108,95 @@ footer {
   background: #020617;
   color: #94a3b8;
 }
+
+/* 🔥 Popup */
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-box {
+  background: #1e293b;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.popup-box button {
+  margin: 10px;
+  padding: 10px 20px;
+  border: none;
+  background: #22c55e;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
 </style>
 
 </head>
 
 <body>
 
-<!-- 🔥 Background Layers -->
+<!-- 🔥 Background -->
 <div id="particles-js"></div>
 <div class="overlay"></div>
 
 <header>
   <h1>DNCC Wonderland</h1>
   <p>Experience Fun, Adventure & Family Entertainment in Dhaka</p>
-  <a href="#" onclick="contactOption()" class="btn">Get Info</a>
+  <a onclick="openPopup()" class="btn">💬 Get Info</a>
 </header>
 
 <section>
   <h2>About Wonderland</h2>
-  <p>DNCC Wonderland (formerly Shyamoli Shishu Mela) is one of Dhaka’s most popular amusement parks. Enjoy thrilling rides, games, and family-friendly attractions.</p>
+  <p>DNCC Wonderland is one of Dhaka’s most popular amusement parks.</p>
 </section>
 
 <section>
   <h2>Our Attractions</h2>
-<div class="grid">
-  <a href="/dncc-wonderland/rides.html" class="card">🎢 Rides & Roller Coasters</a>
-  <a href="/dncc-wonderland/wheel.html" class="card">🎡 Wonder Wheel</a>
-  <a href="/dncc-wonderland/family.html" class="card">👨‍👩‍👧 Family Zone</a>
-  <a href="/dncc-wonderland/food.html" class="card">🍔 Food Court</a>
-</div>
+  <div class="grid">
+    <a href="/dncc-wonderland/rides.html" class="card">🎢 Rides & Roller Coasters</a>
+    <a href="/dncc-wonderland/wheel.html" class="card">🎡 Wonder Wheel</a>
+    <a href="/dncc-wonderland/family.html" class="card">👨‍👩‍👧 Family Zone</a>
+    <a href="/dncc-wonderland/food.html" class="card">🍔 Food Court</a>
+  </div>
 </section>
 
 <section>
   <h2>Visit Us</h2>
-  <p>Location: DNCC Wonderland, Dhaka (Shyamoli area)</p>
-  <a href="#" class="btn">Open Map</a>
+  <p>Location: DNCC Wonderland, Dhaka</p>
 </section>
 
 <section>
   <h2>Contact</h2>
-  <p>📞 Phone: 01934548295</p>
-  <p>📧 Email: info@dnccwonderland.com</p>
+  <p>📞 01934548295</p>
 </section>
+
+<!-- 🔥 POPUP HTML -->
+<div id="popup" class="popup">
+  <div class="popup-box">
+    <h2>Choose Contact Option</h2>
+    
+    <button onclick="callNow()">📞 Call Now</button>
+    <button onclick="openFB()">💬 Facebook Page</button>
+
+    <br><br>
+    <span onclick="closePopup()" style="cursor:pointer;">❌ Close</span>
+  </div>
+</div>
 
 <footer>
   <p>DNCC Wonderland Shishumela</p>
 </footer>
 
-<!-- 🔥 Particle Script -->
+<!-- 🔥 Scripts -->
 <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
 
 <script>
@@ -170,16 +209,24 @@ particlesJS("particles-js", {
   }
 });
 </script>
-<script>
-function contactOption() {
-  let choice = confirm("Call for tickets?\nOK = Call\nCancel = Facebook Page");
 
-  if (choice) {
-    window.location.href = "tel:+8801934548295";
-  } else {
-    window.open("https://www.facebook.com/dnccwonderland2026", "_blank");
-  }
+<script>
+function openPopup() {
+  document.getElementById("popup").style.display = "flex";
+}
+
+function closePopup() {
+  document.getElementById("popup").style.display = "none";
+}
+
+function callNow() {
+  window.location.href = "tel:+8801934548295";
+}
+
+function openFB() {
+  window.open("https://www.facebook.com/dnccwonderland2026", "_blank");
 }
 </script>
+
 </body>
 </html>
