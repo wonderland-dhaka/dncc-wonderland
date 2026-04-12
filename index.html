@@ -72,6 +72,11 @@ header p {
   text-decoration: none;
   font-weight: bold;
   cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  box-shadow: 0 0 15px rgba(0,255,150,0.6);
 }
 
 /* Sections */
@@ -98,7 +103,7 @@ section {
 }
 
 .card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-5px) scale(1.02);
 }
 
 /* Footer */
@@ -138,20 +143,32 @@ footer {
   border-radius: 5px;
   cursor: pointer;
 }
+
+/* 🔥 WhatsApp Button */
+.whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  color: white;
+  padding: 15px;
+  border-radius: 50%;
+  font-size: 20px;
+  text-decoration: none;
+}
 </style>
 
 </head>
 
 <body>
 
-<!-- 🔥 Background -->
 <div id="particles-js"></div>
 <div class="overlay"></div>
 
 <header>
   <h1>DNCC Wonderland</h1>
   <p>Experience Fun, Adventure & Family Entertainment in Dhaka</p>
-  <a onclick="openPopup()" class="btn">Get Info</a>
+  <a onclick="openPopup()" class="btn"> Get Info</a>
 </header>
 
 <section>
@@ -169,31 +186,46 @@ footer {
   </div>
 </section>
 
+<!-- 🔥 NEW SECTION -->
+<section>
+  <h2> Ticket Prices</h2>
+  <p>Entry: 100 BDT</p>
+  <p>Rides: 50 - 100 BDT</p>
+</section>
+
+<section>
+  <h2> Opening Hours</h2>
+  <p>Everyday: 10 AM - 10 PM</p>
+</section>
+
+<section>
+  <h2> Why Visit Us?</h2>
+  <p>✔ Safe Environment</p>
+  <p>✔ Family Friendly</p>
+  <p>✔ Affordable Tickets</p>
+</section>
+
 <section>
   <h2>Visit Us</h2>
   <p>Location: DNCC Wonderland, Dhaka (Shyamoli area)</p>
-<a href="https://www.google.com/maps?q=DNCC+Wonderland+Shyamoli+Dhaka" target="_blank" class="btn">
-    View Location
-</a>
-
+  <a href="https://www.google.com/maps?q=DNCC+Wonderland+Shyamoli+Dhaka" target="_blank" class="btn">
+      View Location
+  </a>
 </section>
 
 <section>
   <h2>Contact</h2>
   <p>📞 01934548295</p>
-  <p>📧 Email: info@dnccwonderland.com</p>
+  <p>📧 info@dnccwonderland.com</p>
 </section>
 
-<!-- 🔥 POPUP HTML -->
 <div id="popup" class="popup">
   <div class="popup-box">
     <h2>Choose Contact Option</h2>
-    
-    <button onclick="callNow()">📞 Call Now</button>
-    <button onclick="openFB()">💬 Facebook Page</button>
-
+    <button onclick="callNow()">Call Now</button>
+    <button onclick="openFB()">Facebook Page</button>
     <br><br>
-    <span onclick="closePopup()" style="cursor:pointer;"> Cancel</span>
+    <span onclick="closePopup()" style="cursor:pointer;">Cancel</span>
   </div>
 </div>
 
@@ -201,7 +233,11 @@ footer {
   <p>DNCC Wonderland Shishumela</p>
 </footer>
 
-<!-- 🔥 Scripts -->
+<!-- 🔥 WhatsApp -->
+<a href="https://wa.me/8801934548295" class="whatsapp" target="_blank">
+
+</a>
+
 <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
 
 <script>
@@ -219,15 +255,12 @@ particlesJS("particles-js", {
 function openPopup() {
   document.getElementById("popup").style.display = "flex";
 }
-
 function closePopup() {
   document.getElementById("popup").style.display = "none";
 }
-
 function callNow() {
   window.location.href = "tel:+8801934548295";
 }
-
 function openFB() {
   window.open("https://www.facebook.com/dnccwonderland2026", "_blank");
 }
