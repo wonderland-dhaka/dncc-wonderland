@@ -42,6 +42,14 @@ body {
   );
   backdrop-filter: blur(8px);
   z-index: -1;
+  animation: gradientMove 10s ease infinite;
+}
+
+/* 🔥 Overlay animation */
+@keyframes gradientMove {
+  0% { filter: hue-rotate(0deg); }
+  50% { filter: hue-rotate(90deg); }
+  100% { filter: hue-rotate(0deg); }
 }
 
 /* Header */
@@ -49,6 +57,7 @@ header {
   background: linear-gradient(to right, #0ea5e9, #22c55e);
   padding: 60px 20px;
   text-align: center;
+  box-shadow: 0 0 40px rgba(0,255,150,0.5);
 }
 
 header h1 {
@@ -84,6 +93,13 @@ section {
   padding: 40px 20px;
   max-width: 1000px;
   margin: auto;
+  animation: fadeIn 1s ease;
+}
+
+/* Fade animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 /* Grid */
@@ -104,6 +120,7 @@ section {
 
 .card:hover {
   transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 0 20px rgba(0,255,150,0.4);
 }
 
 /* Footer */
@@ -153,13 +170,11 @@ footer {
   height: 55px;
   background: #25D366;
   border-radius: 50%;
-  
   display: flex;
   align-items: center;
   justify-content: center;
-
   animation: pulse 2s infinite;
-  transform: translateZ(0); /* 🔥 blur fix */
+  transform: translateZ(0);
 }
 
 .whatsapp:hover {
@@ -169,20 +184,12 @@ footer {
 .whatsapp img {
   width: 28px;
 }
-  @keyframes pulse {
-  0% {
-    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
-  }
-  70% {
-    box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
-  }
-  100% {
-    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
-  }
-}
 
-.whatsapp {
-  animation: pulse 2s infinite;
+/* Pulse animation */
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+  70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
 }
 </style>
 
@@ -214,7 +221,6 @@ footer {
   </div>
 </section>
 
-<!-- 🔥 NEW SECTION -->
 <section>
   <h2> Ticket Prices</h2>
   <p>Entry: 100 BDT</p>
@@ -261,19 +267,20 @@ footer {
   <p>DNCC Wonderland Shishumela</p>
 </footer>
 
-<!-- 🔥 WhatsApp -->
 <a href="https://wa.me/8801934548295" class="whatsapp" target="_blank">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" width="30">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg">
 </a>
+
 <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
 
 <script>
 particlesJS("particles-js", {
   particles: {
-    number: { value: 60 },
-    size: { value: 3 },
-    move: { speed: 1.5 },
-    line_linked: { enable: true }
+    number: { value: 90 },
+    size: { value: 4 },
+    move: { speed: 2 },
+    color: { value: ["#22c55e", "#0ea5e9", "#facc15", "#ff4d4d"] },
+    line_linked: { enable: false }
   }
 });
 </script>
