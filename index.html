@@ -157,9 +157,17 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
+
+  animation: pulse 2s infinite;
+  transform: translateZ(0); /* 🔥 blur fix */
 }
-  .whatsapp:hover {
-  transform: scale(1.1);
+
+.whatsapp:hover {
+  transform: scale(1.05);
+}
+
+.whatsapp img {
+  width: 28px;
 }
   @keyframes pulse {
   0% {
