@@ -291,16 +291,17 @@ function openPopup() {
 }
 function closePopup() {
   document.getElementById("popup").style.display = "none";
+
+  let msg = "Sir, apni DNCC Wonderland a ashle jekono ekta ride a special discount thakbe!";
+  let url = "https://wa.me/8801934548295?text=" + encodeURIComponent(msg);
+
+  window.open(url, "_blank");
 }
 function callNow() {
   window.location.href = "tel:+8801934548295";
 }
 function openFB() {
-  let msg = "Sir, apni DNCC Wonderland a ashle jekono ekta ride a special discount thakbe!";
-  
-  let url = "https://wa.me/8801934548295?text=" + encodeURIComponent(msg);
-
-  window.open(url, "_blank");
+  window.open("https://www.facebook.com/dnccwonderland2026", "_blank");
 }
 </script>
 
